@@ -84,7 +84,7 @@ services:
     restart: always
     build:
       context: ./
-      dockerfile: ./Docker/php/Dockerfile
+      dockerfile: ./docker/php/Dockerfile
     volumes:
       - "./:/var/www/laravel-elk/"
     networks:

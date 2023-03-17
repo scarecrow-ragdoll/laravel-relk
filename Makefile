@@ -11,6 +11,11 @@ help: ## Help info about this Makefile
 ### Docker config ###
 #####################
 
+setup: ## Setup project
+	@docker-compose build
+	@docker-compose up -d
+	@exec docker-compose exec php composer install
+
 build: ## Build project docker images
 	@docker-compose build
 

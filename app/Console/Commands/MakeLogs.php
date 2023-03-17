@@ -32,7 +32,7 @@ class MakeLogs extends Command
 
         if ($scope === 'rabbit') {
             for ($i = 0; $i < $count; $i++) {
-                MessageJob::dispatch(fake()->words(5))->onQueue('default');
+                MessageJob::dispatch(fake()->text())->onQueue('default');
             }
         }
 
