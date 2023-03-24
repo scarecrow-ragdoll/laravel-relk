@@ -2,7 +2,6 @@
 
 namespace App\Console\Commands;
 
-use App\Jobs\MessageJob;
 use Illuminate\Console\Command;
 
 class MakeLogs extends Command
@@ -32,7 +31,7 @@ class MakeLogs extends Command
 
         if ($scope === 'rabbit') {
             for ($i = 0; $i < $count; $i++) {
-                MessageJob::dispatch(fake()->text())->onQueue('default');
+                \Amqp::publish('key', fake()->text());
             }
         }
 
