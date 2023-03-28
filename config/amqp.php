@@ -27,8 +27,8 @@ return [
             'connect_options'       => [],
             'ssl_options'           => [],
 
-            'exchange'              => 'amq.topic',
-            'exchange_type'         => 'topic',
+            'exchange'              => 'amq.direct',
+            'exchange_type'         => 'direct',
             'exchange_passive'      => false,
             'exchange_durable'      => true,
             'exchange_auto_delete'  => false,
